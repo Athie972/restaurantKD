@@ -1,3 +1,4 @@
+@extends('layouts.base')
 @section('title', 'Accueil')
 @section('contenu')
 <div  class="bg-fixed bg-cover bg-center bg-no-repeat h-screen flex-col flex items-center space-y-36 p-11"
@@ -21,7 +22,6 @@ style="background-image:url('https://caffecreole.com/wp-content/uploads/2019/07/
 
 @endsection
 
-@include('layouts.base')
 
 
 
