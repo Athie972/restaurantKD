@@ -1,11 +1,26 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/reservation', function(){
+    return view('reservation');
+})->name('reservation');
+
+Route::get('/contacts', function(){
+    return view('contacts');
+})->name('contacts');
+
+Route::get('/menu', function(){
+    return view('menu');
+})->name('menu');
+
+Route::resource('products', [ProductController::class]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
